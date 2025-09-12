@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About • Data & AI</title>
+  <style>
+    :root{
+      --bg:#0b0f14;
+      --card:#0f1722cc;
+      --ink:#e6eef8;
+      --ink-dim:#b7c4d6;
+      --accent:#6ee7ff;
+      --accent-2:#a78bfa;
+      --muted:#13202e;
+      --ok:#34d399;
+      --warn:#f59e0b;
+      --shadow: 0 10px 30px rgba(0,0,0,.35), 0 2px 6px rgba(0,0,0,.2);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family: ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,Apple Color Emoji,Segoe UI Emoji;
+      color:var(--ink); background: radial-gradient(1200px 700px at 10% 5%, #112033 0%, transparent 55%),
+                 radial-gradient(1200px 700px at 100% 0%, #1b1037 0%, transparent 55%),
+                 linear-gradient(180deg, #0b0f14 0%, #0b0f14 100%);
+    }
+    .container{max-width:1100px; margin:0 auto; padding:28px 20px 72px}
+
+    /* About Card */
+    .card{
+      position:relative; overflow:hidden;
+      background: linear-gradient(180deg, rgba(20,28,40,.85), rgba(16,21,33,.85));
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:26px; padding:36px; box-shadow:var(--shadow);
+      backdrop-filter: blur(8px);
+    }
+    .glow{
+      position:absolute; inset:-2px; z-index:0; pointer-events:none;
+      background: radial-gradient(600px 300px at 10% -10%, rgba(110,231,255,.18), transparent 60%),
+                  radial-gradient(600px 300px at 90% 0%, rgba(167,139,250,.18), transparent 60%);
+      filter: blur(10px);
+    }
+    .content{position:relative; z-index:1; display:grid; grid-template-columns: 1.2fr 1fr; gap:28px; align-items:center}
+    @media (max-width: 900px){
+      .content{grid-template-columns: 1fr;}
+    }
+
+    /* Left side */
+    .eyebrow{display:inline-flex; align-items:center; gap:8px; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-dim); background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.08); padding:8px 10px; border-radius:999px}
+    .eyebrow svg{width:14px; height:14px}
+
+    h1{margin:14px 0 10px; font-weight:800; line-height:1.05; font-size: clamp(28px, 5vw, 44px);}
+    .hook{background: linear-gradient(90deg, var(--accent), var(--accent-2)); -webkit-background-clip:text; background-clip:text; color:transparent}
+
+    .lead{margin:10px 0 18px; color:var(--ink-dim); font-size: clamp(15px, 2.5vw, 18px); line-height:1.6}
+
+    .badges{display:flex; flex-wrap:wrap; gap:8px; margin:14px 0 6px}
+    .badge{font-size:12px; color:#cfe7ff; background:linear-gradient(180deg, rgba(110,231,255,.12), rgba(167,139,250,.12)); border:1px solid rgba(110,231,255,.25); padding:8px 10px; border-radius:999px}
+
+    .cta{display:flex; gap:12px; margin-top:22px; flex-wrap:wrap}
+    .btn{appearance:none; border:1px solid rgba(255,255,255,.12); padding:12px 16px; border-radius:14px; font-weight:600; color:var(--ink); background:linear-gradient(180deg, rgba(110,231,255,.1), rgba(110,231,255,.04)); cursor:pointer; transition:.25s transform, .25s opacity, .25s background}
+    .btn:hover{transform: translateY(-2px);}
+    .btn.secondary{background:transparent}
+
+    /* Right side */
+    .side{
+      display:grid; gap:14px;
+    }
+    .mini-card{
+      background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.08);
+      border-radius:18px; padding:16px 16px 18px;
+    }
+    .kpi{display:flex; align-items:center; justify-content:space-between; gap:14px}
+    .kpi strong{font-size:26px}
+    .kpi small{display:block; color:var(--ink-dim)}
+    .bar{height:8px; background:rgba(255,255,255,.06); border-radius:999px; overflow:hidden; margin-top:10px}
+    .bar > span{display:block; height:100%; width:0}
+
+    /* Animations */
+    @keyframes load { from { width:0 } to { width: var(--val) } }
+    .bar > span{ background: linear-gradient(90deg, var(--accent), var(--accent-2)); animation: load 1.2s ease forwards; }
+
+    /* Footer note */
+    .note{max-width:780px; margin:14px auto 0; color:#a9b7c8; font-size:13px; text-align:center}
+
+    a{color:inherit; text-decoration:none}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <section class="card" aria-label="About me section">
+      <div class="glow" aria-hidden="true"></div>
+      <div class="content">
+        <!-- Left -->
+        <div>
+          <span class="eyebrow" title="AI • Data • ML">
+            <!-- spark icon -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2v5M12 17v5M4.2 4.2l3.6 3.6M16.2 16.2l3.6 3.6M2 12h5M17 12h5M4.2 19.8l3.6-3.6M16.2 7.8l3.6-3.6"/></svg>
+            AI • Data • ML
+          </span>
+          <h1>
+            <span class="hook">Turning data into intelligent solutions</span>
+          </h1>
+          <p class="lead">
+            I design and deploy end‑to‑end machine learning systems—from clean EDA and feature engineering to production‑ready models on the cloud. Focused on real business impact, clear visuals, and scalable MLOps.
+          </p>
+
+          <div class="badges" aria-label="Skills badges">
+            <span class="badge">Python</span>
+            <span class="badge">Statistics</span>
+            <span class="badge">EDA & Visualization</span>
+            <span class="badge">Machine Learning</span>
+            <span class="badge">Deep Learning</span>
+            <span class="badge">NLP</span>
+            <span class="badge">Computer Vision</span>
+            <span class="badge">Azure · MLflow</span>
+            <span class="badge">Hugging Face</span>
+          </div>
+
+          <div class="cta">
+            <a class="btn" href="#portfolio">View Portfolio</a>
+            <a class="btn secondary" href="#contact">Get in touch</a>
+          </div>
+        </div>
+
+        <!-- Right -->
+        <aside class="side" aria-label="Highlights">
+          <div class="mini-card">
+            <div class="kpi">
+              <div>
+                <small>Model readiness</small>
+                <strong>Production‑first</strong>
+              </div>
+              <!-- rocket icon -->
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <div class="bar" role="progressbar" aria-label="Production readiness" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"><span style="--val:90%"></span></div>
+          </div>
+
+          <div class="mini-card">
+            <div class="kpi">
+              <div>
+                <small>End‑to‑end coverage</small>
+                <strong>EDA → MLOps</strong>
+              </div>
+              <!-- flow icon -->
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h6v6H4zM14 11h6v6h-6zM10 10l4 2"/></svg>
+            </div>
+            <div class="bar" role="progressbar" aria-label="Pipeline coverage" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"><span style="--val:85%"></span></div>
+          </div>
+
+          <div class="mini-card">
+            <div class="kpi">
+              <div>
+                <small>Impact focus</small>
+                <strong>Metrics‑driven</strong>
+              </div>
+              <!-- target icon -->
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 3"/></svg>
+            </div>
+            <div class="bar" role="progressbar" aria-label="Impact" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"><span style="--val:92%"></span></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <p class="note">Tip: replace the text with your story, add project links to the buttons, and tune the progress bars by changing <code>--val</code> widths.</p>
+  </div>
+</body>
+</html>

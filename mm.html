@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #000018;
+      color: #f5f5f5;
+      line-height: 1.6;
+    }
+    header {
+      text-align: center;
+      padding: 5rem 1rem;
+      background: linear-gradient(135deg, #001133, #000018);
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: .5rem;
+      color: #00d9ff;
+    }
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.85;
+    }
+    section {
+      padding: 4rem 10%;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #00d9ff;
+      font-size: 2rem;
+    }
+    .about {
+      background: #0a0a1a;
+      border-radius: 15px;
+      padding: 2rem;
+      text-align: center;
+    }
+    .about h3 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      color: #fff;
+    }
+    .about p {
+      max-width: 700px;
+      margin: auto;
+      opacity: 0.9;
+    }
+    .skills-grid {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    .skill-card {
+      background: #111133;
+      padding: 1.5rem;
+      border-radius: 15px;
+      transition: transform 0.3s ease;
+    }
+    .skill-card:hover {
+      transform: translateY(-6px);
+    }
+    .skill-card h3 {
+      margin-bottom: .5rem;
+      color: #00d9ff;
+    }
+    .services, .projects, .contact {
+      text-align: center;
+    }
+    .service, .project {
+      background: #111133;
+      margin: 1rem auto;
+      padding: 1.5rem;
+      border-radius: 15px;
+      max-width: 600px;
+    }
+    .contact a {
+      display: inline-block;
+      margin: .5rem;
+      padding: .8rem 1.5rem;
+      border-radius: 30px;
+      background: #00d9ff;
+      color: #000018;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background .3s ease;
+    }
+    .contact a:hover {
+      background: #00aacc;
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero -->
+  <header>
+    <h1>Mohammed Zkaria</h1>
+    <p>Turning data into intelligent solutions</p>
+  </header>
+
+  <!-- About -->
+  <section class="about">
+    <h2>About Me</h2>
+    <h3>AI & Data Science Enthusiast</h3>
+    <p>
+      Passionate about transforming raw data into actionable insights and intelligent models.  
+      Skilled in Python, Statistics, Machine Learning, and modern AI techniques, with strong foundations in data preprocessing, visualization, and model deployment.
+    </p>
+  </section>
+
+  <!-- Skills -->
+  <section class="skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h3>Python</h3>
+        <p>Experienced in Python for data analysis, machine learning, and AI development. Built multiple projects with pandas, NumPy, scikit-learn, and TensorFlow.</p>
+      </div>
+      <div class="skill-card">
+        <h3>Statistics & Math</h3>
+        <p>Strong foundation in probability, linear algebra, and statistical modeling to power ML algorithms with accuracy and efficiency.</p>
+      </div>
+      <div class="skill-card">
+        <h3>EDA & Visualization</h3>
+        <p>Skilled at uncovering patterns and insights using pandas, matplotlib, seaborn, and Plotly. Transforming messy data into clear stories.</p>
+      </div>
+      <div class="skill-card">
+        <h3>Machine Learning</h3>
+        <p>Hands-on with supervised and unsupervised learning techniques, from regression and classification to clustering and recommendation systems.</p>
+      </div>
+      <div class="skill-card">
+        <h3>Personal Skills</h3>
+        <p>Problem-solver, quick learner, and strong communicator. Passionate about teamwork, continuous growth, and inspiring others.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="services">
+    <h2>Services</h2>
+    <div class="service">
+      <h3>Data Analysis</h3>
+      <p>Clean, preprocess, and analyze datasets to deliver actionable insights and clear visual reports.</p>
+    </div>
+    <div class="service">
+      <h3>AI Model Development</h3>
+      <p>Design and train machine learning and deep learning models tailored to solve real-world problems.</p>
+    </div>
+    <div class="service">
+      <h3>AI Deployment</h3>
+      <p>Deploy models on cloud platforms like Microsoft Azure with MLOps tools for scalability and reliability.</p>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>Student Performance Analysis</h3>
+      <p>Explored real-world educational data to find key factors influencing student grades, using Python and ML models.</p>
+    </div>
+    <div class="project">
+      <h3>COVID-19 Dashboard</h3>
+      <p>Built an interactive dashboard to visualize cases, deaths, and recovery rates using EDA and visualization tools.</p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact">
+    <h2>Contact</h2>
+    <p>Let’s connect and build something impactful together.</p>
+    <a href="mailto:your@email.com">Email Me</a>
+    <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+    <a href="https://github.com/yourgithub" target="_blank">GitHub</a>
+  </section>
+
+</body>
+</html>
