@@ -196,7 +196,12 @@ margin: 20px;
     gap: 30px;
 
 }
-
+.benha {
+    display: block;
+    text-align: center;
+    color: #3a6cf4;
+    font-weight: 800;
+}
 .main h2 {
     font-size: 2em;
     font-weight: 500;
